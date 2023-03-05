@@ -11,7 +11,7 @@ const Page = async ({params}) => {
 export default Page;
 
 export async function generateStaticParams() {
-    const {events_categories} = await import('@/data/data.json');
+    const {events_categories} = await import('../../../data/data.json');
     const allPaths = events_categories.map(ev => {
         return {
             cat: ev.id.toString(),
